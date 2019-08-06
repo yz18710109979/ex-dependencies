@@ -18,6 +18,7 @@ import lombok.EqualsAndHashCode;
 @Data
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
+// JSON 不显示为 null 的属性
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ErrorResult extends AbstractBaseResult {
 	/**
@@ -26,5 +27,9 @@ public class ErrorResult extends AbstractBaseResult {
 	private static final long serialVersionUID = 8679090380917210377L;
 	private int code;
     private String title;
+
+    /**
+     * 调试信息
+     */
     private String detail;
 }

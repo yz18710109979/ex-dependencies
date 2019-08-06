@@ -24,46 +24,60 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
+@SuppressWarnings("all")
 public class SuccessResult<T extends AbstractBaseDomain> extends AbstractBaseResult {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -8545579057942356134L;
 	private Links links;
-	private List<DataBean> data;
+    private List<DataBean> data;
 
-	public SuccessResult(String self, T attributes) {
-		links = new Links();
-		links.setSelf(self);
+    /**
+     * 请求的结果（单笔）
+     * @param self 当前请求路径
+     * @param attributes 领域模型
+     */
+    public SuccessResult(String self, T attributes) {
+        links = new Links();
+        links.setSelf(self);
 
-		createDataBean(null, attributes);
-	}
+        createDataBean(null, attributes);
+    }
 
-	public SuccessResult(String self, int next, int last, List<T> attributes) {
-		links = new Links();
-		links.setSelf(self);
-		links.setNext(self + "?page=" + next);
-		links.setLast(self + "?page=" + last);
+    /**
+     * 请求的结果（分页）
+     * @param self 当前请求路径
+     * @param next 下一页的页码
+     * @param last 最后一页的页码
+     * @param attributes 领域模型集合
+     */
+    public SuccessResult(String self, int next, int last, List<T> attributes) {
+        links = new Links();
+        links.setSelf(self);
+        links.setNext(self + "?page=" + next);
+        links.setLast(self + "?page=" + last);
 
-		attributes.forEach(attribute -> createDataBean(self, attribute));
-	}
+        attributes.forEach(attribute -> createDataBean(self, attribute));
+    }
 
-	private void createDataBean(String self, T attributes) {
-		if (data == null) {
-			data = Lists.newArrayList();
-		}
+    /**
+     * 创建 DataBean
+     * @param self 当前请求路径
+     * @param attributes 领域模型
+     */
+    private void createDataBean(String self, T attributes) {
+        if (data == null) {
+            data = Lists.newArrayList();
+        }
 
-		DataBean dataBean = new DataBean();
-		dataBean.setId(attributes.getId());
-		dataBean.setType(attributes.getClass().getSimpleName());
-		dataBean.setAttributes(attributes);
+        DataBean dataBean = new DataBean();
+        dataBean.setId(attributes.getId());
+        dataBean.setType(attributes.getClass().getSimpleName());
+        dataBean.setAttributes(attributes);
 
-		if (StringUtils.isNotBlank(self)) {
-			Links links = new Links();
-			links.setSelf(self + "/" + attributes.getId());
-			dataBean.setLinks(links);
-		}
+        if (StringUtils.isNotBlank(self)) {
+            Links links = new Links();
+            links.setSelf(self + "/" + attributes.getId());
+            dataBean.setLinks(links);
+        }
 
-		data.add(dataBean);
-	}
+        data.add(dataBean);
+    }
 }

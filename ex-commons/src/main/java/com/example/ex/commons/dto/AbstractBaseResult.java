@@ -11,12 +11,12 @@ import lombok.Data;
  * <p>Title: AbstractBaseResult</p>
  * <p>Description: </p>
  *
- * @author Lusifer
+ * @author 
  * @version 1.0.0
  * @date 2019/1/23 15:10
  */
 @Data
-public class AbstractBaseResult implements Serializable{
+public abstract class AbstractBaseResult implements Serializable{
 	/**
 	 * 
 	 */
