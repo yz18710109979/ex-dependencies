@@ -10,13 +10,21 @@
 		<version>1.0.0</version>
 		<relativePath>../ex-dependencies/pom.xml</relativePath>
 	</parent>
-	<artifactId>ex-commons</artifactId>
-	<packaging>jar</packaging>
-	
+	<artifactId>ex-commons-domain</artifactId>
 	<dependencies>
+		<!-- Commons Begin -->
 		<dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.1-api</artifactId>
+		</dependency>
+		<!-- Commons End -->
+
+		<!-- Projects Begin -->
+		<dependency>
+			<groupId>com.example</groupId>
+			<artifactId>ex-commons</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+		<!-- Projects End -->
 	</dependencies>
 </project>
