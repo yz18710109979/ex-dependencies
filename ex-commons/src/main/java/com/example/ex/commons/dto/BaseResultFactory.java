@@ -81,7 +81,7 @@ public class BaseResultFactory<T extends AbstractBaseDomain> {
      * @param level  日志级别，只有 DEBUG 时才显示详情
      * @return
      */
-    public AbstractBaseResult build(int code, String title, String detail, String level) {
+    public static AbstractBaseResult build(int code, String title, String detail, String level) {
         // 设置请求失败的响应码
         response.setStatus(code);
 

@@ -6,7 +6,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 import tk.mybatis.spring.annotation.MapperScan;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.example.ex")
 @EnableDiscoveryClient
 @MapperScan(basePackages = "com.example.ex.commons.mapper")
 public class RegApplication {
