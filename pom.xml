@@ -313,6 +313,7 @@
     <module>ex-commons-mapper</module>
     <module>ex-commons-service</module>
     <module>ex-database</module>
+    <module>ex-external-skywalking</module>
   </modules>
   
 </project>
