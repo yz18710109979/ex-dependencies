@@ -314,6 +314,7 @@
     <module>ex-commons-service</module>
     <module>ex-database</module>
     <module>ex-external-skywalking</module>
+    <module>ex-service-reg</module>
   </modules>
   
 </project>
