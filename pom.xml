@@ -319,6 +319,7 @@
     <module>ex-service-provider-item</module>
     <module>ex-service-consumer-item</module>
     <module>ex-commons-consumer</module>
+    <module>ex-service-gateway</module>
   </modules>
   
 </project>
