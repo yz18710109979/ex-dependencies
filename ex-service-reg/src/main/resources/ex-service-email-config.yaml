@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: ex-service-email
+  mail:
+    host: smtp.qq.com
+    # 你的邮箱授权码
+    password: yz362400
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+    # 发送邮件的邮箱地址
+    username: 79241484@qq.com
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.3.101:8848
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: 192.168.3.101:8080
+
+server:
+  port: 9507
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
