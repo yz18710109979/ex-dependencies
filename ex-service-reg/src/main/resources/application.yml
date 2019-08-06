@@ -19,6 +19,12 @@ spring:
       transport:
         port: 8719
         dashboard: 192.168.3.101:8080
+    stream:
+      rocketmq:
+        binder:
+          namesrv-addr: 127.0.0.1:9876
+      bindings:
+        output: {destination: topic-email, content-type: application/json}
 
 server:
   port: 9501

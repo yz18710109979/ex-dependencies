@@ -8,9 +8,8 @@
 		<groupId>com.example</groupId>
 		<artifactId>ex-dependencies</artifactId>
 		<version>1.0.0</version>
-		<relativePath>../ex-dependencies/pom.xml</relativePath>
 	</parent>
-	<artifactId>ex-service-reg</artifactId>
+	<artifactId>ex-service-email</artifactId>
 	<packaging>jar</packaging>
 	<dependencies>
 		<!-- Spring Boot Begin -->
@@ -26,6 +25,20 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>net.sourceforge.nekohtml</groupId>
+			<artifactId>nekohtml</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 		<!-- Spring Boot End -->
 
@@ -43,15 +56,15 @@
 			<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
 		</dependency>
 		<dependency>
-		    <groupId>org.springframework.cloud</groupId>
-		    <artifactId>spring-cloud-starter-stream-rocketmq</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-stream-rocketmq</artifactId>
 		</dependency>
 		<!-- Spring Cloud End -->
 
 		<!-- Projects Begin -->
 		<dependency>
 			<groupId>com.example</groupId>
-			<artifactId>ex-commons-service</artifactId>
+			<artifactId>ex-commons-domain</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
 		<!-- Projects End -->
@@ -63,7 +76,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>com.example.ex.service.reg.RegApplication</mainClass>
+					<mainClass>com.funtl.myshop.service.reg.MyShopServiceEmailApplication</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>
