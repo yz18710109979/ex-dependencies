@@ -1,20 +1,7 @@
-package com.example.ex.commons.service;
+package com.example.ex.service.consumer.item.service;
 
 import com.example.ex.commons.dto.AbstractBaseDomain;
 
-/**
- * 通用的业务逻辑
- * <p>
- * Title: BaseCrudService
- * </p>
- * <p>
- * Description:
- * </p>
- *
- * @author
- * @version 1.0.0
- * @date 2019/1/25 9:43
- */
 public interface BaseCrudService<T extends AbstractBaseDomain> {
 
 	/**

@@ -317,6 +317,8 @@
     <module>ex-service-reg</module>
     <module>ex-service-email</module>
     <module>ex-service-provider-item</module>
+    <module>ex-service-consumer-item</module>
+    <module>ex-commons-consumer</module>
   </modules>
   
 </project>
