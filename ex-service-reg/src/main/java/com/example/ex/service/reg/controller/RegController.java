@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.ex.commons.domain.TbUser;
 import com.example.ex.commons.dto.AbstractBaseResult;
-import com.example.ex.commons.service.TbUserService;
 import com.example.ex.commons.validator.BeanValidator;
 import com.example.ex.commons.web.AbstractBaseController;
+import com.example.ex.service.TbUserService;
 
 @RestController
 @RequestMapping(value = "reg")

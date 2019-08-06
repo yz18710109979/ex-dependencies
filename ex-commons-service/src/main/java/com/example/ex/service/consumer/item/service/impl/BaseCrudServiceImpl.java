@@ -6,7 +6,7 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.ex.commons.dto.AbstractBaseDomain;
-import com.example.ex.service.consumer.item.service.BaseCrudService;
+import com.example.ex.service.BaseCrudService;
 
 import tk.mybatis.mapper.MyMapper;
 import tk.mybatis.mapper.entity.Example;

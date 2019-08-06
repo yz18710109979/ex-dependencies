@@ -1,4 +1,4 @@
-package com.example.ex.service.consumer.item.service;
+package com.example.ex.service;
 
 import com.example.ex.commons.domain.TbUser;
 
