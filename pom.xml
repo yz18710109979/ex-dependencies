@@ -311,6 +311,7 @@
     <module>ex-commons</module>
     <module>ex-commons-domain</module>
     <module>ex-commons-mapper</module>
+    <module>ex-commons-service</module>
   </modules>
   
 </project>
