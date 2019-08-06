@@ -316,6 +316,7 @@
     <module>ex-external-skywalking</module>
     <module>ex-service-reg</module>
     <module>ex-service-email</module>
+    <module>ex-service-provider-item</module>
   </modules>
   
 </project>
