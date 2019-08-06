@@ -8,7 +8,6 @@
 		<groupId>com.example</groupId>
 		<artifactId>ex-dependencies</artifactId>
 		<version>1.0.0</version>
-		<relativePath>../ex-dependencies/pom.xml</relativePath>
 	</parent>
 	<artifactId>ex-commons</artifactId>
 	<packaging>jar</packaging>
